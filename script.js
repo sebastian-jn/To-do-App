@@ -32,9 +32,10 @@ function render() {
         const span = document.createElement("span");
         span.textContent = task.text;
 
-        const del = document.createElement("span");
-        del.textContent = "❌";
+        const del = document.createElement("button");
+        del.innerHTML = "<i data-lucide='trash-2'></i>";
         del.className = "delete";
+        del.setAttribute("aria-label", "Delete task");
         del.addEventListener("click", function () {
             tasks.splice(index, 1);
             save();
@@ -44,6 +45,8 @@ function render() {
         li.append(checkbox, span, del);
         list.appendChild(li);
     });
+    
+    lucide.createIcons();
 }
 
 form.addEventListener("submit", function (event) {

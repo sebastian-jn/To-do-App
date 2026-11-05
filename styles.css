@@ -72,21 +72,6 @@ button:hover {
 }
 
 #task-list {
-  list-style: none;
-  margin: 20px 0 0;
-  padding: 0;
-}
-
-#task-list li {
-  padding: 12px 4px;
-  border-bottom: 1px solid var(--border);
-}
-
-#task-list li:last-child {
-  border-bottom: 0;
-}
-
-#task-list {
     list-style: none;
     margin: 20px 0 0;
     padding: 0;
@@ -120,11 +105,17 @@ button:hover {
 }
 
 .delete {
-  padding: 4px 12px;
+  display: flex;
+  margin-left: auto;
+  padding: 8px;
   background: transparent;
   color: #94a3b8;
-  font-size: 1.3rem;
-  line-height: 1;
+  border-radius: 8px;
+}
+
+.delete svg {
+  width: 18px;
+  height: 18px;
 }
 
 .delete:hover {
